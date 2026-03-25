@@ -37,7 +37,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(383, 35);
+            this.listBox1.Location = new System.Drawing.Point(381, 39);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(277, 355);
             this.listBox1.TabIndex = 0;
@@ -69,6 +69,7 @@
             this.btn_upravitKlienta.TabIndex = 1;
             this.btn_upravitKlienta.Text = "Upravit klienta";
             this.btn_upravitKlienta.UseVisualStyleBackColor = true;
+            this.btn_upravitKlienta.Click += new System.EventHandler(this.btn_upravitKlienta_Click);
             // 
             // Form1
             // 
