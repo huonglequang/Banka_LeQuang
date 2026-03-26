@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Banka_LeQuang
 {
-    internal class Klient
+    public class Klient
     {
-
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
         public string UzivatelskeJmeno { get; set; }

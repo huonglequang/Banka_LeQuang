@@ -18,25 +18,44 @@ namespace Banka_LeQuang
         {
             InitializeComponent();
         }
-        
 
         private void btn_pridejKlienta_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2();
+            Klient User = null;
+            Form2 f2 = new Form2(User);
             f2.ShowDialog();
-            if (DialogResult == DialogResult.OK)
+            if (f2.DialogResult == DialogResult.OK)
             {
-                MessageBox.Show("Klient byl úspěšně přidán.");
-            }
-            else
-            {
-                MessageBox.Show("Přidání klienta bylo zrušeno.");
+                listBox1.Items.Clear();
+                foreach (var klient in Klient.Ucty)
+                {
+                    listBox1.Items.Add(klient);
+                }
             }
         }
 
         private void btn_upravitKlienta_Click(object sender, EventArgs e)
         {
+            if (listBox1.SelectedItem != null)
+            {
+                Klient User = (Klient)listBox1.SelectedItem;
+                Form2 f2 = new Form2(User);
+                f2.ShowDialog();
+                if (f2.DialogResult == DialogResult.OK)
+                {
+                    Klient.Ucty.Remove(User);
+                    listBox1.Items.Clear();
+                    foreach (var klient in Klient.Ucty)
+                    {
+                        listBox1.Items.Add(klient);
+                    }
+                }
 
+            }
+            else
+            {
+                MessageBox.Show("Vyberte klienta, kterého chcete upravit.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
