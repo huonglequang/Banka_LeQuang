@@ -50,11 +50,24 @@ namespace Banka_LeQuang
                         listBox1.Items.Add(klient);
                     }
                 }
-
             }
             else
             {
                 MessageBox.Show("Vyberte klienta, kterého chcete upravit.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btn_odstranKlienta_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Klient User = (Klient)listBox1.SelectedItem;
+                Klient.Ucty.Remove(User);
+                listBox1.Items.Clear();
+                foreach (var klient in Klient.Ucty)
+                {
+                    listBox1.Items.Add(klient);
+                }
             }
         }
     }

@@ -54,16 +54,17 @@
             // 
             // btn_odstranKlienta
             // 
-            this.btn_odstranKlienta.Location = new System.Drawing.Point(134, 104);
+            this.btn_odstranKlienta.Location = new System.Drawing.Point(134, 162);
             this.btn_odstranKlienta.Name = "btn_odstranKlienta";
             this.btn_odstranKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_odstranKlienta.TabIndex = 1;
             this.btn_odstranKlienta.Text = "Odstranit klienta";
             this.btn_odstranKlienta.UseVisualStyleBackColor = true;
+            this.btn_odstranKlienta.Click += new System.EventHandler(this.btn_odstranKlienta_Click);
             // 
             // btn_upravitKlienta
             // 
-            this.btn_upravitKlienta.Location = new System.Drawing.Point(134, 165);
+            this.btn_upravitKlienta.Location = new System.Drawing.Point(134, 104);
             this.btn_upravitKlienta.Name = "btn_upravitKlienta";
             this.btn_upravitKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_upravitKlienta.TabIndex = 1;
