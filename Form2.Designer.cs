@@ -44,6 +44,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_cisloUctu = new System.Windows.Forms.TextBox();
+            this.label_ucet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -133,7 +135,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(35, 219);
+            this.button3.Location = new System.Drawing.Point(167, 264);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 35);
             this.button3.TabIndex = 0;
@@ -188,16 +190,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Penezni operace";
             // 
+            // tb_cisloUctu
+            // 
+            this.tb_cisloUctu.Location = new System.Drawing.Point(12, 222);
+            this.tb_cisloUctu.Name = "tb_cisloUctu";
+            this.tb_cisloUctu.Size = new System.Drawing.Size(178, 20);
+            this.tb_cisloUctu.TabIndex = 1;
+            // 
+            // label_ucet
+            // 
+            this.label_ucet.AutoSize = true;
+            this.label_ucet.Location = new System.Drawing.Point(12, 206);
+            this.label_ucet.Name = "label_ucet";
+            this.label_ucet.Size = new System.Drawing.Size(55, 13);
+            this.label_ucet.TabIndex = 2;
+            this.label_ucet.Text = "Cislo Uctu";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label_ucet);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.tb_cisloUctu);
             this.Controls.Add(this.tb_heslo);
             this.Controls.Add(this.tb_uzivatelskeJmeno);
             this.Controls.Add(this.tb_primeni);
@@ -232,5 +252,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tb_cisloUctu;
+        private System.Windows.Forms.Label label_ucet;
     }
 }

@@ -17,7 +17,16 @@ namespace Banka_LeQuang
         public Form1()
         {
             InitializeComponent();
+            if (Klient.Ucty != null)
+            {
+                Klient.DeserializujZXml("database.xml");
+                foreach (var klient in Klient.Ucty)
+                {               
+                    listBox1.Items.Add(klient);
+                }
+            }
         }
+
 
         private void btn_pridejKlienta_Click(object sender, EventArgs e)
         {
@@ -30,6 +39,7 @@ namespace Banka_LeQuang
                 foreach (var klient in Klient.Ucty)
                 {
                     listBox1.Items.Add(klient);
+                    Klient.SerializujDoXml("database.xml");
                 }
             }
         }
@@ -48,6 +58,7 @@ namespace Banka_LeQuang
                     foreach (var klient in Klient.Ucty)
                     {
                         listBox1.Items.Add(klient);
+                        Klient.SerializujDoXml("database.xml");
                     }
                 }
             }
@@ -68,6 +79,20 @@ namespace Banka_LeQuang
                 {
                     listBox1.Items.Add(klient);
                 }
+            }
+        }
+
+        private void btn_uctyKlienta_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Klient User = (Klient)listBox1.SelectedItem;
+                Form2 f2 = new Form2(User);
+                f2.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vyberte klienta, jehož účty chcete zobrazit.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

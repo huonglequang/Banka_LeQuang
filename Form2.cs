@@ -26,6 +26,13 @@ namespace Banka_LeQuang
                 tb_primeni.Text = User.Prijmeni;
                 tb_uzivatelskeJmeno.Text = User.UzivatelskeJmeno;
                 tb_heslo.Text = User.Heslo;
+                tb_cisloUctu.Text = User.Ucet.CisloUctu;
+                tb_cisloUctu.ReadOnly = true;
+            }
+            else
+            {
+                label_ucet.Visible = false;
+                tb_cisloUctu.Visible = false;
             }
         }
 
@@ -35,7 +42,15 @@ namespace Banka_LeQuang
             {
                 try
                 {
-                    Klient novyKlient = new Klient(tb_jmeno.Text, tb_primeni.Text, tb_uzivatelskeJmeno.Text, tb_heslo.Text);
+                    Random rnd = new Random();
+                    string cisloUctu = rnd.Next(100000, 999999).ToString();
+                    while (Klient.Ucty.Any(k => k.Ucet != null && k.Ucet.CisloUctu == cisloUctu))
+                    {
+                        cisloUctu = rnd.Next(100000, 999999).ToString();
+                    }
+                    Ucet novyUcet = new Ucet(cisloUctu);
+
+                    Klient novyKlient = new Klient(tb_jmeno.Text, tb_primeni.Text, tb_uzivatelskeJmeno.Text, tb_heslo.Text, novyUcet);
                     Klient.PridejKlienta(novyKlient);
                     DialogResult = DialogResult.OK;
                 }
@@ -49,7 +64,7 @@ namespace Banka_LeQuang
             {
                 try
                 {
-                    Klient upravenyKlient = new Klient(tb_jmeno.Text, tb_primeni.Text, tb_uzivatelskeJmeno.Text, tb_heslo.Text);
+                    Klient upravenyKlient = new Klient(tb_jmeno.Text, tb_primeni.Text, tb_uzivatelskeJmeno.Text, tb_heslo.Text, User.Ucet);
                     Klient.PridejKlienta(upravenyKlient);
                     DialogResult = DialogResult.OK;
                 }

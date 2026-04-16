@@ -32,6 +32,7 @@
             this.btn_pridejKlienta = new System.Windows.Forms.Button();
             this.btn_odstranKlienta = new System.Windows.Forms.Button();
             this.btn_upravitKlienta = new System.Windows.Forms.Button();
+            this.btn_uctyKlienta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -72,6 +73,16 @@
             this.btn_upravitKlienta.UseVisualStyleBackColor = true;
             this.btn_upravitKlienta.Click += new System.EventHandler(this.btn_upravitKlienta_Click);
             // 
+            // btn_uctyKlienta
+            // 
+            this.btn_uctyKlienta.Location = new System.Drawing.Point(134, 225);
+            this.btn_uctyKlienta.Name = "btn_uctyKlienta";
+            this.btn_uctyKlienta.Size = new System.Drawing.Size(183, 40);
+            this.btn_uctyKlienta.TabIndex = 1;
+            this.btn_uctyKlienta.Text = "Ucty Klienta";
+            this.btn_uctyKlienta.UseVisualStyleBackColor = true;
+            this.btn_uctyKlienta.Click += new System.EventHandler(this.btn_uctyKlienta_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,6 +90,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_upravitKlienta);
             this.Controls.Add(this.btn_odstranKlienta);
+            this.Controls.Add(this.btn_uctyKlienta);
             this.Controls.Add(this.btn_pridejKlienta);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Button btn_pridejKlienta;
         private System.Windows.Forms.Button btn_odstranKlienta;
         private System.Windows.Forms.Button btn_upravitKlienta;
+        private System.Windows.Forms.Button btn_uctyKlienta;
     }
 }
 

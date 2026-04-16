@@ -7,15 +7,22 @@ using System.Windows.Forms;
 
 namespace Banka_LeQuang
 {
-    internal class Ucet
+    public class Ucet
     {
-        public string CisloUctu { get; private set; }
-        public decimal Zustatek { get; private set; }
+        public string CisloUctu { get; set; }
+        public decimal Zustatek { get; set; }
 
-        public Ucet(string cisloUctu, decimal pocatecniVklad)
+        public Ucet () { }
+        
+        public Ucet(string cisloUctu)
         {
             CisloUctu = cisloUctu;
-            Zustatek = pocatecniVklad;
+            Zustatek = 0;
+        }
+
+        public override string ToString()
+        {
+            return CisloUctu;
         }
 
         public void VlozPenize(decimal castka)
