@@ -27,8 +27,8 @@ namespace Banka_LeQuang
 
         public void VlozPenize(decimal castka)
         {
-            if (castka > 0)
                 Zustatek += castka;
+
         }
 
         public void VyberPenize(decimal castka)
@@ -36,7 +36,7 @@ namespace Banka_LeQuang
             if (castka > 0 && castka <= Zustatek)
                 Zustatek -= castka;
             else
-                throw new Exception("Nedostatečný zůstatek nebo neplatná částka.");
+                MessageBox.Show("Nedostatečný zůstatek na účtu.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

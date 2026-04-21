@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btn_pridejKlienta = new System.Windows.Forms.Button();
             this.btn_odstranKlienta = new System.Windows.Forms.Button();
             this.btn_upravitKlienta = new System.Windows.Forms.Button();
             this.btn_uctyKlienta = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
             // listBox1
@@ -45,43 +47,52 @@
             // 
             // btn_pridejKlienta
             // 
+            this.btn_pridejKlienta.BackColor = System.Drawing.Color.YellowGreen;
             this.btn_pridejKlienta.Location = new System.Drawing.Point(134, 48);
             this.btn_pridejKlienta.Name = "btn_pridejKlienta";
             this.btn_pridejKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_pridejKlienta.TabIndex = 1;
             this.btn_pridejKlienta.Text = "Přidat klienta";
-            this.btn_pridejKlienta.UseVisualStyleBackColor = true;
+            this.btn_pridejKlienta.UseVisualStyleBackColor = false;
             this.btn_pridejKlienta.Click += new System.EventHandler(this.btn_pridejKlienta_Click);
             // 
             // btn_odstranKlienta
             // 
+            this.btn_odstranKlienta.BackColor = System.Drawing.Color.LightCoral;
             this.btn_odstranKlienta.Location = new System.Drawing.Point(134, 162);
             this.btn_odstranKlienta.Name = "btn_odstranKlienta";
             this.btn_odstranKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_odstranKlienta.TabIndex = 1;
             this.btn_odstranKlienta.Text = "Odstranit klienta";
-            this.btn_odstranKlienta.UseVisualStyleBackColor = true;
+            this.btn_odstranKlienta.UseVisualStyleBackColor = false;
             this.btn_odstranKlienta.Click += new System.EventHandler(this.btn_odstranKlienta_Click);
             // 
             // btn_upravitKlienta
             // 
+            this.btn_upravitKlienta.BackColor = System.Drawing.SystemColors.Info;
             this.btn_upravitKlienta.Location = new System.Drawing.Point(134, 104);
             this.btn_upravitKlienta.Name = "btn_upravitKlienta";
             this.btn_upravitKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_upravitKlienta.TabIndex = 1;
             this.btn_upravitKlienta.Text = "Upravit klienta";
-            this.btn_upravitKlienta.UseVisualStyleBackColor = true;
+            this.btn_upravitKlienta.UseVisualStyleBackColor = false;
             this.btn_upravitKlienta.Click += new System.EventHandler(this.btn_upravitKlienta_Click);
             // 
             // btn_uctyKlienta
             // 
+            this.btn_uctyKlienta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btn_uctyKlienta.Location = new System.Drawing.Point(134, 225);
             this.btn_uctyKlienta.Name = "btn_uctyKlienta";
             this.btn_uctyKlienta.Size = new System.Drawing.Size(183, 40);
             this.btn_uctyKlienta.TabIndex = 1;
             this.btn_uctyKlienta.Text = "Ucty Klienta";
-            this.btn_uctyKlienta.UseVisualStyleBackColor = true;
+            this.btn_uctyKlienta.UseVisualStyleBackColor = false;
             this.btn_uctyKlienta.Click += new System.EventHandler(this.btn_uctyKlienta_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form1
             // 
@@ -106,6 +117,7 @@
         private System.Windows.Forms.Button btn_odstranKlienta;
         private System.Windows.Forms.Button btn_upravitKlienta;
         private System.Windows.Forms.Button btn_uctyKlienta;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

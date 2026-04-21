@@ -31,7 +31,8 @@ namespace Banka_LeQuang
         private void btn_pridejKlienta_Click(object sender, EventArgs e)
         {
             Klient User = null;
-            Form2 f2 = new Form2(User);
+            string mode = "add";
+            Form2 f2 = new Form2(User, mode);
             f2.ShowDialog();
             if (f2.DialogResult == DialogResult.OK)
             {
@@ -49,7 +50,8 @@ namespace Banka_LeQuang
             if (listBox1.SelectedItem != null)
             {
                 Klient User = (Klient)listBox1.SelectedItem;
-                Form2 f2 = new Form2(User);
+                string mode = "edit";
+                Form2 f2 = new Form2(User, mode);
                 f2.ShowDialog();
                 if (f2.DialogResult == DialogResult.OK)
                 {
@@ -87,8 +89,19 @@ namespace Banka_LeQuang
             if (listBox1.SelectedItem != null)
             {
                 Klient User = (Klient)listBox1.SelectedItem;
-                Form2 f2 = new Form2(User);
+                string mode = "finance";
+                Form2 f2 = new Form2(User, mode);
                 f2.ShowDialog();
+                if (f2.DialogResult == DialogResult.OK)
+                {
+                    Klient.Ucty.Remove(User);
+                    listBox1.Items.Clear();
+                    foreach (var klient in Klient.Ucty)
+                    {
+                        listBox1.Items.Add(klient);
+                        Klient.SerializujDoXml("database.xml");
+                    }
+                }
             }
             else
             {
